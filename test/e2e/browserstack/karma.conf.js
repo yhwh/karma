@@ -14,6 +14,8 @@ module.exports = function(config) {
 
     reporters: ['dots'],
 
+    logLevel: config.LOG_DEBUG,
+
     browserStack: {
       username: 'vojta.jina@gmail.com',
       accessKey: process.env.BROWSER_STACK_ACCESS_KEY
