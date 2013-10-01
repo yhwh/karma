@@ -89,7 +89,7 @@
   ],
   "dependencies": {
     "di": "~0.0.1",
-    "socket.io": "~0.9.13",
+    "socket.io": "git://github.com/yhwh/socket.io.git#hacked-0.9",
     "chokidar": "~0.6",
     "glob": "~3.1.21",
     "minimatch": "~0.2",
