@@ -205,7 +205,7 @@ var Karma = function(socket, context, navigator, location) {
         if (transport === 'websocket' || transport === 'flashsocket') {
           resultsBufferLimit = 1;
         } else {
-          resultsBufferLimit = 50;
+          resultsBufferLimit = 1;
         }
 
         socket.emit('register', {
