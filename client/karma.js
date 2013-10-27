@@ -198,12 +198,7 @@ var Karma = function(socket, context, navigator, location) {
     // prevent double registration on reconnect
     var transport = socket.socket.transport.name;
 
-    // TODO(vojta): make resultsBufferLimit configurable
-    if (transport === 'websocket' || transport === 'flashsocket') {
-      resultsBufferLimit = 1;
-    } else {
-      resultsBufferLimit = 50;
-    }
+    resultsBufferLimit = 1;
 
     socket.emit('register', {
       name: navigator.userAgent,
