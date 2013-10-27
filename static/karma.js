@@ -213,7 +213,7 @@ var Karma = function(socket, context, navigator, location) {
         if (transport === 'websocket' || transport === 'flashsocket') {
           resultsBufferLimit = 1;
         } else {
-          resultsBufferLimit = 1;
+          resultsBufferLimit = 50;
         }
 
         socket.emit('register', {
@@ -237,7 +237,7 @@ var KARMA_URL_ROOT = require('./constants').KARMA_URL_ROOT;
 // connect socket.io
 // https://github.com/LearnBoost/Socket.IO/wiki/Configuring-Socket.IO
 var socket = io.connect('http://' + location.host, {
-  'reconnection delay': 30000,
+  'reconnection delay': 500,
   'reconnection limit': 2000,
   'resource': KARMA_URL_ROOT.substr(1) + 'socket.io',
   'sync disconnect on unload': true,
